@@ -9,3 +9,8 @@ exports['returns the price of the product if we pass only one sku'] = function(t
     test.equal(checkout('A'), 50);
     test.done();
 }
+
+exports['returns the sum of the all skus if it don\'t have any offer'] = function(test) {
+    test.equal(checkout('A,B'), 80);
+    test.done();
+}
