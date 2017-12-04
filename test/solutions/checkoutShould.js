@@ -39,3 +39,8 @@ exports['returns a price of checkout with all the products with offer but one is
     test.equal(checkout('AAAA'), 180);
     test.done();
 }
+
+exports['xxx'] = function(test) {
+    test.equal(checkout('ABCDCBAABCABBAAA'), 505);
+    test.done();
+}
