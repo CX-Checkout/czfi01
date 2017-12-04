@@ -34,3 +34,8 @@ exports['returns a price of a checkout with multiple offers and products without
     test.equal(checkout('AAABBC'), 195);
     test.done();
 }
+
+exports['returns a price of checkout with all the products with offer but one is outside the pack'] = function(test) {
+    test.equal(checkout('AAAA'), 180);
+    test.done();
+}
