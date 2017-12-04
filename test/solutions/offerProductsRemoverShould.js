@@ -21,6 +21,6 @@ exports['returns an array with only the unoffered skus when it has more than one
 }
 
 exports['returns a offered product that is not included in the offer pack'] = function(test) {
-    test.equal(JSON.stringify(removeOfferedProducts(['A', 'B', 'A', 'B', 'A', 'C', 'A', 'A', 'A'])), JSON.stringify(['C']));
+    test.equal(JSON.stringify(removeOfferedProducts(['A', 'A', 'A', 'A'])), JSON.stringify(['A']));
     test.done();
 }
