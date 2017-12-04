@@ -14,3 +14,8 @@ exports['returns the sum of the all skus if it don\'t have any offer'] = functio
     test.equal(checkout('A,B'), 80);
     test.done();
 }
+
+exports['return the sum of all skus we have in our shop if it don\'t have any offer'] = function(test) {
+    test.equal(checkout('A,B,C,D'), 115);
+    test.done();
+}
