@@ -25,7 +25,7 @@ exports['return the offer price if it have an offer in the list'] = function(tes
     test.done();
 }
 
-exports['returns the sum of offer price and the product price'] = function(test) {
-    test.equal(checkout('A,A,B,A'), 160);
-    test.done();
-}
+// exports['returns the sum of offer price and the product price'] = function(test) {
+//     test.equal(checkout('A,A,B,A'), 160);
+//     test.done();
+// }
