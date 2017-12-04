@@ -16,5 +16,6 @@ exports['returns the offer price if we have any offer in the skus list with prod
 }
 
 exports['returns the offer price when we have multiple offers in the skus list'] = function(test) {
-    test.equal(['A', 'A', 'A','A', 'A', 'A'])
+    test.equal(['A', 'A', 'A','A', 'A', 'A'], 260);
+    test.done();
 }
