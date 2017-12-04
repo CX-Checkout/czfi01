@@ -15,7 +15,12 @@ exports['returns the offer price if we have any offer in the skus list with prod
     test.done();
 }
 
-exports['returns the offer price when we have multiple offers in the skus list'] = function(test) {
-    test.equal(['A', 'A', 'A','A', 'A', 'A'], 260);
+exports['returns the offer price when we have multiple offers with the same product in the skus list'] = function(test) {
+    test.equal(calculateOfferPrice(['A', 'A', 'A','A', 'A', 'A']), 260);
+    test.done();
+}
+
+exports['return the offer price when we have multiple offers with differnent products in the skus list'] = function(test) {
+    test.equal(calculateOfferPrice(['A', 'A', 'A','A', 'A', 'A']), 260);
     test.done();
 }
