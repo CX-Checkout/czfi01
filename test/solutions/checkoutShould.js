@@ -1,7 +1,7 @@
 var checkout = require('../../lib/solutions/checkout');
 
 exports['return -1 for a invalid input'] = function (test) {
-    test.equal(checkout(''), -1);
+    test.equal(checkout(''), 0);
     test.done();
 };
 
@@ -11,26 +11,26 @@ exports['returns the price of the product if it pass only one sku'] = function(t
 }
 
 exports['return the sum of all skus it have in the shop if it don\'t have any offer'] = function(test) {
-    test.equal(checkout('A,B,C,D'), 115);
+    test.equal(checkout('ABCD'), 115);
     test.done();
 }
 
 exports['return -1 if it have an invalid sku in the list'] = function(test) {
-    test.equal(checkout('A,H,J'), -1);
+    test.equal(checkout('AHJ'), -1);
     test.done();
 }
 
 exports['return the offer price if it have an offer in the list'] = function(test) {
-    test.equal(checkout('A,A,A'), 130);
+    test.equal(checkout('AAA'), 130);
     test.done();
 }
 
 exports['returns the sum of offer price and the product price'] = function(test) {
-    test.equal(checkout('A,A,B,A'), 160);
+    test.equal(checkout('AABA'), 160);
     test.done();
 }
 
 exports['returns a price of a checkout with multiple offers and products without offer'] = function(test) {
-    test.equal(checkout('A,A,A,B,B,C'), 195);
+    test.equal(checkout('AAABBC'), 195);
     test.done();
 }
