@@ -11,6 +11,11 @@ exports['returns an empty array if it has one offer inside'] = function(test) {
 }
 
 exports['returns an array with only the unoffered skus'] = function(test) {
-    test.equal(JSON.stringify(['A', 'A', 'A', 'C']), JSON.stringify(['C']));
+    test.equal(JSON.stringify(removeOfferedProducts(['A', 'A', 'A', 'C'])), JSON.stringify(['C']));
+    test.done();
+}
+
+exports['returns an array with only the unoffered skus when it has more than one offer'] = function(test) {
+    test.equal(JSON.stringify(removeOfferedProducts(['A', 'B', 'A', 'B', 'A', 'C', 'A', 'A', 'A'])), JSON.stringify(['C']));
     test.done();
 }
