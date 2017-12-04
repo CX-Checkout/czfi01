@@ -14,3 +14,8 @@ exports['return the sum of all skus we have in our shop if it don\'t have any of
     test.equal(checkout('A,B,C,D'), 115);
     test.done();
 }
+
+exports['return -1 if we have an invalid sku in the list'] = function(test) {
+    test.equal(checkout('A,H,J'), -1);
+    test.done();
+}
