@@ -40,7 +40,7 @@ exports['returns a price of checkout with all the products with offer but one is
     test.done();
 }
 
-exports['xxx'] = function(test) {
+exports['returns the price of this skus with multiple offers and multiple skus without offers'] = function(test) {
     test.equal(checkout('ABCDCBAABCABBAAA'), 505);
     test.done();
 }
