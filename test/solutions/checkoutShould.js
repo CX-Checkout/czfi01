@@ -45,6 +45,7 @@ exports['returns the price of this skus with multiple offers and multiple skus w
     test.done();
 }
 
-exports['returns the price for the sku list'] = function(test) {
+exports['returns the price for the E sku in the list'] = function(test) {
     test.equal(checkout('E'), 40);
+    test.done();
 }

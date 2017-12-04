@@ -16,17 +16,17 @@ exports['returns the offer price if we have any offer in the skus list with prod
 }
 
 exports['returns the offer price when we have multiple offers with the same product in the skus list'] = function(test) {
-    test.equal(calculateOfferPrice(['A', 'A', 'A','A', 'A', 'A']), 260);
+    test.equal(calculateOfferPrice(['A', 'A', 'A','A', 'A', 'A']), 200);
     test.done();
 }
 
 exports['return the offer price when we have multiple offers with different products in the skus list'] = function(test) {
-    test.equal(calculateOfferPrice(['A', 'A', 'B', 'B', 'A','A', 'A', 'A']), 305);
+    test.equal(calculateOfferPrice(['A', 'A', 'B', 'B', 'A','A', 'A', 'A']), 245);
     test.done();
 }
 
 exports['return the offer price when we have multiple offers with different products and products without offer in the skus list'] = function(test) {
-    test.equal(calculateOfferPrice(['A', 'A', 'B', 'B', 'A','A', 'A', 'A', 'C']), 305);
+    test.equal(calculateOfferPrice(['A', 'A', 'B', 'B', 'A','A', 'A', 'A', 'C']), 245);
     test.done();
 }
 
