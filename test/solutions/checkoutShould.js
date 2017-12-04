@@ -29,3 +29,8 @@ exports['returns the sum of offer price and the product price'] = function(test)
     test.equal(checkout('A,A,B,A'), 160);
     test.done();
 }
+
+exports['returns a price of a checkout with multiple offers and products without offer'] = function(test) {
+    test.equal(checkout('A,A,A,B,B,C'), 195);
+    test.done();
+}
