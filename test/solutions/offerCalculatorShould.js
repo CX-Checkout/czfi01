@@ -11,5 +11,6 @@ exports['returns the offer price if we have any offer in the skus list'] = funct
 }
 
 exports['returns the offer price if we have any offer in the skus list with products with no offer'] = function(test) {
-    
+    test.equal(calculateOfferPrice(['B', 'A', 'C', 'A', 'A']), 130);
+    test.done();
 }
