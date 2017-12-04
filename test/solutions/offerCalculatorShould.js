@@ -29,3 +29,8 @@ exports['return the offer price when we have multiple offers with different prod
     test.equal(calculateOfferPrice(['A', 'A', 'B', 'B', 'A','A', 'A', 'A', 'C']), 305);
     test.done();
 }
+
+exports['returns the price of offered products but one is not included in the offer pack'] = function(test) {
+    test.equal(calculateOfferPrice(['A', 'A', 'A', 'A']), 180);
+    test.done();
+}
