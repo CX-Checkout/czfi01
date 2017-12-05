@@ -15,17 +15,12 @@ exports['returns an array with only the unoffered skus'] = function(test) {
     test.done();
 }
 
-exports['returns an array with only the unoffered skus when it has more than one offer'] = function(test) {
-    test.equal(JSON.stringify(removeOfferedProducts(['A', 'B', 'A', 'B', 'A', 'C', 'A', 'A', 'A'])), JSON.stringify(['C', 'A']));
-    test.done();
-}
-
 exports['returns a offered product that is not included in the offer pack'] = function(test) {
     test.equal(JSON.stringify(removeOfferedProducts(['A', 'A', 'A', 'A'])), JSON.stringify(['A']));
     test.done();
 }
 
-exports['xx'] = function(test) {
+exports['returns an array with only the unoffered skus when it has more than one offer'] = function(test) {
     test.equal(JSON.stringify(removeOfferedProducts("AAAAAAAAABBBBCCCDEEEFFF".split('')).sort()), JSON.stringify('ACCCDEEEFFF'.split('')));
     test.done();
 }
