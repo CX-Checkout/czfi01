@@ -49,3 +49,8 @@ exports['returns the price for the E sku in the list'] = function(test) {
     test.equal(checkout('E'), 40);
     test.done();
 }
+
+exports['returns the price of the free products and the other products in our list'] = function(test) {
+    test.equal(checkout('EEB'), 80);
+    test.done();
+}
