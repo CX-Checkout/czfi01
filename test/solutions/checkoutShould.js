@@ -16,7 +16,7 @@ exports['return the sum of all skus it have in the shop if it don\'t have any of
 }
 
 exports['return -1 if it have an invalid sku in the list'] = function(test) {
-    test.equal(checkout('AHJ'), -1);
+    test.equal(checkout('AHJ....'), -1);
     test.done();
 }
 
