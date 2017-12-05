@@ -26,6 +26,6 @@ exports['returns a offered product that is not included in the offer pack'] = fu
 }
 
 exports['xx'] = function(test) {
-    test.equal(JSON.stringify(removeOfferedProducts("AAAAAAAAABBBBCCCDEEEFFF".split(''))), JSON.stringify('ACCCDEEEFFF'.split('')));
+    test.equal(JSON.stringify(removeOfferedProducts("AAAAAAAAABBBBCCCDEEEFFF".split('')).sort()), JSON.stringify('ACCCDEEEFFF'.split('')));
     test.done();
 }
