@@ -10,7 +10,7 @@ exports['returns a list with one product if we have one pack and one product'] =
     test.done();
 }
 
-exports['returns a empty list if we have two packs inside'] = function() {
+exports['returns a empty list if we have two packs inside'] = function(test) {
     test.equal(JSON.stringify(packProducts(['S', 'T', 'X', 'S', 'T', 'X'])), JSON.stringify([]));
     test.done();
 }
