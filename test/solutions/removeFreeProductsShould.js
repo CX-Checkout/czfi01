@@ -14,3 +14,8 @@ exports['returns the array without the free products of our offers'] = function(
     test.equal(JSON.stringify(removeFreeProducts(['B', 'E', 'E', 'C', 'F', 'F', 'F'])), JSON.stringify(['E', 'E', 'C', 'F', 'F']));
     test.done();
 }
+
+exports['returns the array without the free products of our offers'] = function(test) {
+    test.equal(JSON.stringify(removeFreeProducts('FFABCDECBAABCABBAAAEEAAFF'.split(''))), JSON.stringify(['E', 'E', 'C', 'F', 'F']));
+    test.done();
+}
