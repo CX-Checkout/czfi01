@@ -51,6 +51,6 @@ exports['returns the price for the new skus in the list'] = function(test) {
 }
 
 exports['returns the price of the free products and the other products in our list'] = function(test) {
-    test.equal(checkout('ABCDECBAABCABBAAAEEAA'), 665);
+    test.equal(checkout('FFABCDECBAABCABBAAAEEAAFF'), 695);
     test.done();
 }
