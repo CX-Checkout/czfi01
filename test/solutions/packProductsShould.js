@@ -14,3 +14,8 @@ exports['returns a empty list if we have two packs inside'] = function(test) {
     test.equal(JSON.stringify(packProducts(['S', 'T', 'X', 'S', 'T', 'X'])), JSON.stringify([]));
     test.done();
 }
+
+exports['removes the pack with high price'] = function(test) {
+    test.equal(JSON.stringify(packProducts(['S', 'S', 'S', 'Z'])), JSON.stringify(['S']));
+    test.done();
+}
