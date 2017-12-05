@@ -59,3 +59,8 @@ exports['return the pack price'] = function(test) {
     test.equal(checkout('STX'), 45);
     test.done();
 }
+
+exports['return the two pack price'] = function(test) {
+    test.equal(checkout('STXXTS'), 90);
+    test.done();
+}
