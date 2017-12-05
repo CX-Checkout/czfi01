@@ -54,8 +54,3 @@ exports['returns the price of the free products and the other products in our li
     test.equal(checkout('FFABCDECBAABCABBAAAEEAAFF'), 695);
     test.done();
 }
-
-exports['xxx'] = function(test) {
-    test.equal(checkout('UUU'), 80);
-    test.done();
-}
